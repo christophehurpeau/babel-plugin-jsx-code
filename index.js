@@ -7,9 +7,6 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = function (_ref) {
   var t = _ref.types;
 
-  var sourceJSXIdentifier = t.jSXIdentifier('source');
-  var resultJSXIdentifier = t.jSXIdentifier('result');
-
   return {
     visitor: {
       JSXElement: function JSXElement(path, state) {
@@ -46,7 +43,10 @@ exports.default = function (_ref) {
           throw path.buildCodeFrameError('Only one child is expected');
         }
 
-        path.replaceWith(t.jSXElement(t.jSXOpeningElement(t.JSXIdentifier(renderIdentifier.name), [t.jSXAttribute(sourceJSXIdentifier, t.stringLiteral(nodeToString(node))), t.jSXAttribute(resultJSXIdentifier, t.jSXExpressionContainer(children[0]))], true), null, [], true));
+        var sourceValue = t.jSXExpressionContainer(t.stringLiteral(nodeToString(node)));
+        var resultValue = t.jSXExpressionContainer(children[0]);
+
+        path.replaceWith(t.jSXElement(t.jSXOpeningElement(t.JSXIdentifier(renderIdentifier.name), [t.jSXAttribute(t.jSXIdentifier('source'), sourceValue), t.jSXAttribute(t.jSXIdentifier('result'), resultValue)], true), null, [], true));
       }
     }
   };
@@ -59,5 +59,13 @@ var _babelGenerator2 = _interopRequireDefault(_babelGenerator);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var nodeToString = function nodeToString(id) {
-  return (0, _babelGenerator2.default)(id, { concise: true }).code;
+  var code = (0, _babelGenerator2.default)(id, {
+    concise: true,
+    retainLines: true
+  }).code;
+  code = code.trim();
+  if (!code.includes('\n')) return code;
+  var ident = code.substr(code.lastIndexOf('\n') + 1).replace(/^(\s+)[^\s].*$/, '$1');
+  code = code.replace(new RegExp('^' + ident, 'gm'), '');
+  return code;
 };

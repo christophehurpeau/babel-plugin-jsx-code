@@ -19,6 +19,11 @@ export default () => (
         <li>Red</li>
       </ul>
     </Code>
+
+    <Code render={RenderCode}>
+      <span />
+    </Code>
+
   </div>
 )
 `;
@@ -54,7 +59,7 @@ export default (() => React.createElement(
     "A list:"
   ),
   React.createElement(RenderCode, {
-    source: "<Code render={RenderCode}> <ul>              <li>Green</li> <li>Red</li> </ul> </Code>",
+    source: "<Code render={RenderCode}>\\n  <ul>\\n    <li>Green</li>\\n    <li>Red</li>\\n  </ul>\\n</Code>",
     result: React.createElement(
       "ul",
       null,
@@ -69,6 +74,10 @@ export default (() => React.createElement(
         "Red"
       )
     )
+  }),
+  React.createElement(RenderCode, {
+    source: "<Code render={RenderCode}>\\n  <span />\\n</Code>",
+    result: React.createElement("span", null)
   })
 ));
 `;

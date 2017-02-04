@@ -1,11 +1,18 @@
 import generate from 'babel-generator';
 
-const nodeToString = (id) => generate(id, { concise: true }).code;
+const nodeToString = (id) => {
+  let code = generate(id, {
+    concise: true,
+    retainLines: true,
+  }).code;
+  code = code.trim();
+  if (!code.includes('\n')) return code;
+  const ident = code.substr(code.lastIndexOf('\n') + 1).replace(/^(\s+)[^\s].*$/, '$1');
+  code = code.replace(new RegExp(`^${ident}`, 'gm'), '');
+  return code;
+};
 
 export default function ({ types: t }) {
-  const sourceJSXIdentifier = t.jSXIdentifier('source');
-  const resultJSXIdentifier = t.jSXIdentifier('result');
-
   return {
     visitor: {
       JSXElement(path, state) {
@@ -40,13 +47,16 @@ export default function ({ types: t }) {
           throw path.buildCodeFrameError('Only one child is expected');
         }
 
+        const sourceValue = t.jSXExpressionContainer(t.stringLiteral(nodeToString(node)));
+        const resultValue = t.jSXExpressionContainer(children[0]);
+
         path.replaceWith(
           t.jSXElement(
             t.jSXOpeningElement(
               t.JSXIdentifier(renderIdentifier.name),
               [
-                t.jSXAttribute(sourceJSXIdentifier, t.stringLiteral(nodeToString(node))),
-                t.jSXAttribute(resultJSXIdentifier, t.jSXExpressionContainer(children[0])),
+                t.jSXAttribute(t.jSXIdentifier('source'), sourceValue),
+                t.jSXAttribute(t.jSXIdentifier('result'), resultValue),
               ],
               true
             ),
