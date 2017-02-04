@@ -18,7 +18,6 @@ export default function ({ types: t }) {
       JSXElement(path, state) {
         const node = path.node;
         const openingElement = node.openingElement;
-        // console.log(node);
 
         if (!t.isJSXIdentifier(openingElement.name)) return;
 
@@ -28,16 +27,19 @@ export default function ({ types: t }) {
         if (binding.path.parent.source.value !== 'babel-plugin-jsx-code/Component') return;
 
         if (!openingElement.attributes.length) {
-          throw path.buildCodeFrameError(`No attributes, required attribute \`render\``);
+          throw path.buildCodeFrameError('No attributes, required attribute `render`');
         }
         const renderAttribute = openingElement.attributes.find(attribute => (
           t.isJSXIdentifier(attribute.name) && attribute.name.name === 'render'
         ));
         if (!renderAttribute) {
-          throw path.buildCodeFrameError(`Missing attribute \`render\``);
+          throw path.buildCodeFrameError('Missing attribute `render`');
         }
-        if (!t.isJSXExpressionContainer(renderAttribute.value) || !t.isIdentifier(renderAttribute.value.expression)) {
-          throw path.buildCodeFrameError(`\`render\` should be a valid render component, like \`render={RenderCode}\``);
+        if (!t.isJSXExpressionContainer(renderAttribute.value)
+            || !t.isIdentifier(renderAttribute.value.expression)) {
+          throw path.buildCodeFrameError(
+            '`render` should be a valid render component, like `render={RenderCode}`'
+          );
         }
 
         const renderIdentifier = renderAttribute.value.expression;
@@ -66,6 +68,6 @@ export default function ({ types: t }) {
           )
         );
       },
-    }
+    },
   };
 }

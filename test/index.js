@@ -7,10 +7,11 @@ const pluginPath = require.resolve('..');
 
 const last = process.argv[process.argv.length - 1];
 const tests = last !== 'test/index.js' ? [last]
-  : fs.readdirSync(__dirname + '/tests').filter(name => name.endsWith('.js'));
+  : fs.readdirSync(`${__dirname}/tests`).filter(name => name.endsWith('.js'));
 
-tests.forEach(filename => {
-  const testContent = require(__dirname + '/tests/' + filename);
+tests.forEach((filename) => {
+  // eslint-disable-next-line global-require, import/no-dynamic-require
+  const testContent = require(`${__dirname}/tests/${filename}`);
 
   test(testContent.name || filename, () => {
     try {
@@ -34,7 +35,6 @@ tests.forEach(filename => {
       } else {
         throw err;
       }
-
     }
   });
 });
