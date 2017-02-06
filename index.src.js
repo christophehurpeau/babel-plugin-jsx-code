@@ -49,7 +49,9 @@ export default function ({ types: t }) {
           throw path.buildCodeFrameError('Only one child is expected');
         }
 
-        const sourceValue = t.jSXExpressionContainer(t.stringLiteral(nodeToString(node)));
+        const sourceValue = t.jSXExpressionContainer(
+          t.stringLiteral(nodeToString(children[0]))
+        );
         const resultValue = t.jSXExpressionContainer(children[0]);
 
         path.replaceWith(

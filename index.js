@@ -12,7 +12,6 @@ exports.default = function (_ref) {
       JSXElement: function JSXElement(path, state) {
         var node = path.node;
         var openingElement = node.openingElement;
-        // console.log(node);
 
         if (!t.isJSXIdentifier(openingElement.name)) return;
 
@@ -43,7 +42,7 @@ exports.default = function (_ref) {
           throw path.buildCodeFrameError('Only one child is expected');
         }
 
-        var sourceValue = t.jSXExpressionContainer(t.stringLiteral(nodeToString(node)));
+        var sourceValue = t.jSXExpressionContainer(t.stringLiteral(nodeToString(children[0])));
         var resultValue = t.jSXExpressionContainer(children[0]);
 
         path.replaceWith(t.jSXElement(t.jSXOpeningElement(t.JSXIdentifier(renderIdentifier.name), [t.jSXAttribute(t.jSXIdentifier('source'), sourceValue), t.jSXAttribute(t.jSXIdentifier('result'), resultValue)], true), null, [], true));
