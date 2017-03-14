@@ -1,5 +1,7 @@
 # babel-plugin-jsx-code [![NPM version][npm-image]][npm-url]
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/christophehurpeau/babel-plugin-jsx-code.svg)](https://greenkeeper.io/)
+
 Replace `<Code>` content to render code side by side with source string
 
 [![Dependency ci Status][dependencyci-image]][dependencyci-url]
