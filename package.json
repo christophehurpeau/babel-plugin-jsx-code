@@ -33,7 +33,7 @@
     "babel-preset-stage-0": "^6.5.0",
     "eslint": "^3.15.0",
     "eslint-config-airbnb-base": "^11.0.0",
-    "eslint-config-pob": "^11.1.0",
+    "eslint-config-pob": "^14.1.1",
     "eslint-plugin-import": "^2.2.0",
     "komet": "^0.1.4",
     "komet-karma": "^0.2.3",
