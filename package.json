@@ -38,6 +38,6 @@
     "komet": "^0.1.4",
     "komet-karma": "^0.2.3",
     "mocha": "^4.0.0",
-    "pob-release": "^3.0.0"
+    "pob-release": "^4.0.0"
   }
 }
