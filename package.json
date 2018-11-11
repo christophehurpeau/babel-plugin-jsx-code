@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-jsx-code",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Replace `<Code>` content to render code side by side with source string",
   "keywords": [
     "babel-plugin"
