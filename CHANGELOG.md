@@ -1,3 +1,21 @@
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/christophehurpeau/babel-plugin-jsx-code/compare/v0.1.1...v1.0.0) (2018-11-11)
+
+
+### Bug Fixes
+
+* remove node 6 ([a242aea](https://github.com/christophehurpeau/babel-plugin-jsx-code/commit/a242aea))
+
+### Features
+
+* babel 7 and typescript definitions ([1defe37](https://github.com/christophehurpeau/babel-plugin-jsx-code/commit/1defe37))
+
+
+### BREAKING CHANGES
+
+* @babel/core 7
+
+
 <a name="0.1.1"></a>
 ## [0.1.1](https://github.com/christophehurpeau/babel-plugin-jsx-code/compare/v0.1.0...v0.1.1) (2017-02-06)
 
