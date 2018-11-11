@@ -1,9 +1,18 @@
-# babel-plugin-jsx-code [![NPM version][npm-image]][npm-url]
+<h3 align="center">
+  babel-plugin-jsx-code
+</h3>
 
-Replace `<Code>` content to render code side by side with source string
+<p align="center">
+  Replace `<Code>` content to render code side by side with source string
+</p>
 
-[![Dependency ci Status][dependencyci-image]][dependencyci-url]
-[![Dependency Status][daviddm-image]][daviddm-url]
+<p align="center">
+  <a href="https://npmjs.org/package/babel-plugin-jsx-code"><img src="https://img.shields.io/npm/v/babel-plugin-jsx-code.svg?style=flat-square"></a>
+  <a href="https://circleci.com/gh/christophehurpeau/babel-plugin-jsx-code"><img src="https://img.shields.io/circleci/project/christophehurpeau/babel-plugin-jsx-code/master.svg?style=flat-square"></a>
+  <a href="https://david-dm.org/christophehurpeau/babel-plugin-jsx-code"><img src="https://david-dm.org/christophehurpeau/babel-plugin-jsx-code.svg?style=flat-square"></a>
+  <a href="https://dependencyci.com/github/christophehurpeau/babel-plugin-jsx-code"><img src="https://dependencyci.com/github/christophehurpeau/babel-plugin-jsx-code/badge?style=flat-square"></a>
+  <a href="https://codecov.io/gh/christophehurpeau/babel-plugin-jsx-code"><img src="https://img.shields.io/codecov/c/github/christophehurpeau/babel-plugin-jsx-code/master.svg?style=flat-square"></a>
+</p>
 
 ## Usage
 
@@ -55,10 +64,3 @@ Render to:
   </div>
 </div>
 ```
-
-[npm-image]: https://img.shields.io/npm/v/babel-plugin-jsx-code.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/babel-plugin-jsx-code
-[daviddm-image]: https://david-dm.org/christophehurpeau/babel-plugin-jsx-code.svg?style=flat-square
-[daviddm-url]: https://david-dm.org/christophehurpeau/babel-plugin-jsx-code
-[dependencyci-image]: https://dependencyci.com/github/christophehurpeau/babel-plugin-jsx-code/badge?style=flat-square
-[dependencyci-url]: https://dependencyci.com/github/christophehurpeau/babel-plugin-jsx-code

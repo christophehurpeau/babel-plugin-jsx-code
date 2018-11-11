@@ -1,36 +1,33 @@
-/* global test */
-const fs = require('fs');
-const babel = require('babel-core');
-const { strictEqual } = require('assert');
+import fs from 'fs';
+import { transform } from '@babel/core';
 
-const pluginPath = require.resolve('..');
+const pluginPath = require.resolve('.');
 
-const last = process.argv[process.argv.length - 1];
-const tests = last !== 'test/index.js' ? [last]
-  : fs.readdirSync(`${__dirname}/tests`).filter(name => name.endsWith('.js'));
+const tests = fs
+  .readdirSync(`${__dirname}/__tests_fixtures__`)
+  .filter((name) => name.endsWith('.js'));
 
 tests.forEach((filename) => {
   // eslint-disable-next-line global-require, import/no-dynamic-require
-  const testContent = require(`${__dirname}/tests/${filename}`);
+  const testContent = require(`${__dirname}/__tests_fixtures__/${filename}`);
 
   test(testContent.name || filename, () => {
     try {
-      const output = babel.transform(testContent.actual, {
+      const output = transform(testContent.actual, {
         babelrc: false,
-        presets: ['react'],
-        plugins: [
-          [pluginPath],
-        ],
+        presets: ['@babel/react'],
+        plugins: [[pluginPath]],
       });
 
       const actual = output.code.trim();
       const expected = testContent.expected.trim();
 
-      strictEqual(actual, expected);
+      expect(actual).toBe(expected);
     } catch (err) {
       if (err._babel && err instanceof SyntaxError) {
         console.log(`Unexpected error in test: ${test.name || filename}`);
         console.log(`${err.name}: ${err.message}\n${err.codeFrame}`);
+        // eslint-disable-next-line unicorn/no-process-exit
         process.exit(1);
       } else {
         throw err;

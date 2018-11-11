@@ -1,0 +1,11 @@
+{
+  "env": {
+    "test": {
+      "only": ["src/"],
+      "ignore": ["src/__tests_fixtures__"],
+      "presets": [
+        ["pob-babel/preset"]
+      ]
+    }
+  }
+}
