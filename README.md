@@ -3,7 +3,7 @@
 </h3>
 
 <p align="center">
-  Replace `<Code>` content to render code side by side with source string
+  Replace `&lt;Code&gt;` content to render code side by side with source string
 </p>
 
 <p align="center">
