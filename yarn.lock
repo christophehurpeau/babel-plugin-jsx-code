@@ -415,7 +415,7 @@
     "@babel/helper-plugin-utils" "^7.0.0"
     "@babel/plugin-transform-flow-strip-types" "^7.0.0"
 
-"@babel/preset-react@^7.0.0":
+"@babel/preset-react@7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@babel/preset-react/-/preset-react-7.0.0.tgz#e86b4b3d99433c7b3e9e91747e2653958bc6b3c0"
   integrity sha512-oayxyPS4Zj+hF6Et11BwuBkmpgT/zMxyuZgFrMeZID6Hdh3dGlk4sHCAhdBCpuCKW2ppBfl2uCCetlrUIJRY3w==
@@ -647,7 +647,7 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.5.6.tgz#9c03d3fed70a8d517c191b7734da2879b50ca26c"
   integrity sha512-ZBFR7TROLVzCkswA3Fmqq+IIJt62/T7aY/Dmz+QkU7CaW2QFqAitCE8Ups7IzmGhcN1YWMBT4Qcoc07jU9hOJQ==
 
-"@types/react@^16.7.3":
+"@types/react@16.7.3":
   version "16.7.3"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.7.3.tgz#dd96b19b21c450fab7d136f71d48f4b8fc72777e"
   integrity sha512-ve/2lnXuLNaTDR1SPvsEX25m+NoNW3PMJxL2jd372UR8oJPwR5+jgtcheUoN27O+qKLFmQy0y0YKRwZcwtny3w==
@@ -1160,7 +1160,7 @@ babel-preset-jest@^23.2.0:
     babel-plugin-jest-hoist "^23.2.0"
     babel-plugin-syntax-object-rest-spread "^6.13.0"
 
-babel-preset-latest-node@^2.0.2:
+babel-preset-latest-node@2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/babel-preset-latest-node/-/babel-preset-latest-node-2.0.2.tgz#3b932d1ef03d2b77f2af2eb8b6bfb73d536f0007"
   integrity sha512-2kotC9j4AJYg2F4wmd/MmSklCsIRf5VRge7hko2lFaxlV3eyMvoTpgVSQSWjybnz69IcetmWUEXgxBMqD49j/g==
@@ -5321,7 +5321,7 @@ pn@^1.1.0:
   resolved "https://registry.yarnpkg.com/pn/-/pn-1.1.0.tgz#e2f4cef0e219f463c179ab37463e4e1ecdccbafb"
   integrity sha512-2qHaIQr2VLRFoxe2nASzsV6ef4yOOH+Fi9FBOVH6cqeSgUnoyySPZkxzLuzd+RYOQTRpROA0ztTMqxROKSb/nA==
 
-pob-babel@^23.3.1:
+pob-babel@23.3.1:
   version "23.3.1"
   resolved "https://registry.yarnpkg.com/pob-babel/-/pob-babel-23.3.1.tgz#2d4e8749b86093a85ab61b1deb60f07710bd5a5d"
   integrity sha512-eRpomrw+FYD33TZuG4MT60BB4MIPU2dZ93hZ+rad0KtBnOy+5pFP2bGfTGg4GM1UA1F2JAYAnBcSZYwSKuTZpg==
@@ -5334,7 +5334,7 @@ pob-babel@^23.3.1:
     rollup-plugin-babel "^4.0.3"
     rollup-plugin-node-resolve "^3.4.0"
 
-pob-release@^4.5.0:
+pob-release@4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/pob-release/-/pob-release-4.5.0.tgz#e6c1c708f129654b55b58c97b3bdb0022b775ba4"
   integrity sha512-KJekq+Tpok0/chn4PgAzowcOkVeOjnCmJN0/etKlo7lowDB3bSzT65w+OAs92I0oJdppDfRqoaxHjVYRHGtQTg==
@@ -5482,7 +5482,7 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react@^16.6.1:
+react@16.6.1:
   version "16.6.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.6.1.tgz#ee2aef4f0a09e494594882029821049772f915fe"
   integrity sha512-OtawJThYlvRgm9BXK+xTL7BIlDx8vv21j+fbQDjRRUyok6y7NyjlweGorielTahLZHYIdKUoK2Dp9ByVWuMqxw==
@@ -6558,7 +6558,7 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@^3.1.6:
+typescript@3.1.6:
   version "3.1.6"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.1.6.tgz#b6543a83cfc8c2befb3f4c8fba6896f5b0c9be68"
   integrity sha512-tDMYfVtvpb96msS1lDX9MEdHrW4yOuZ4Kdc4Him9oU796XldPYF/t2+uKoX0BBa0hXXwDlqYQbXY5Rzjzc5hBA==
