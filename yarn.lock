@@ -1218,10 +1218,10 @@ babel-preset-jest@^23.2.0:
     babel-plugin-jest-hoist "^23.2.0"
     babel-plugin-syntax-object-rest-spread "^6.13.0"
 
-babel-preset-latest-node@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/babel-preset-latest-node/-/babel-preset-latest-node-2.1.0.tgz#b7c7697ed55a244d57a3a05752b327540967a1d8"
-  integrity sha512-uFqbmWor6wqm8OvsRuQuR1t5E81Xj/9Qt89C0bOMrfHbx7u+JTBlKpHg5kIgQBfKtW5p9vsMq5ToBKBJ8NeMXw==
+babel-preset-latest-node@3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/babel-preset-latest-node/-/babel-preset-latest-node-3.0.1.tgz#e0cb55a5be849c4ba875ac093a6862e66d6b86ef"
+  integrity sha512-be9eLNbVwtgWLWO9zv0537/hSzmEANt2agPoy8xWKh4roruh0sJZYSOu1jf5lZOCgOX+Ypoa19Pndew05qTQrg==
   dependencies:
     "@babel/plugin-proposal-async-generator-functions" "^7.1.0"
     "@babel/plugin-proposal-object-rest-spread" "^7.0.0"
