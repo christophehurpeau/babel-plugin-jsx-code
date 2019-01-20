@@ -5384,15 +5384,15 @@ pob-babel@23.3.1:
     rollup-plugin-babel "^4.0.3"
     rollup-plugin-node-resolve "^3.4.0"
 
-pob-release@4.5.0:
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/pob-release/-/pob-release-4.5.0.tgz#e6c1c708f129654b55b58c97b3bdb0022b775ba4"
-  integrity sha512-KJekq+Tpok0/chn4PgAzowcOkVeOjnCmJN0/etKlo7lowDB3bSzT65w+OAs92I0oJdppDfRqoaxHjVYRHGtQTg==
+pob-release@4.6.3:
+  version "4.6.3"
+  resolved "https://registry.yarnpkg.com/pob-release/-/pob-release-4.6.3.tgz#b2d52e8064f587c76a16b952fbaae8302894ee4c"
+  integrity sha512-mwWsHJncCLlkY207X33SW3qgkpDO344zMQnOt6ypKf5FS5+anWGBeE+ZZVW6kx1qnyw0L2UyWCrBOCjhv2+lHQ==
   dependencies:
     conventional-recommended-bump "^0.3.0"
     inquirer "^6.0.0"
     minimist-argv "^1.1.0"
-    semver "^5.5.0"
+    semver "^5.6.0"
     standard-changelog "0.0.1"
 
 posix-character-classes@^0.1.0:
@@ -6037,7 +6037,7 @@ semver-compare@^1.0.0:
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.3.0.tgz#9b2ce5d3de02d17c6012ad326aa6b4d0cf54f94f"
   integrity sha1-myzl094C0XxgEq0yaqa00M9U+U8=
 
-semver@5.6.0, semver@^5.3.0, semver@^5.4.1, semver@^5.5.0, semver@^5.5.1:
+semver@5.6.0, semver@^5.3.0, semver@^5.4.1, semver@^5.5.0, semver@^5.5.1, semver@^5.6.0:
   version "5.6.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.6.0.tgz#7e74256fbaa49c75aa7c7a205cc22799cac80004"
   integrity sha512-RS9R6R35NYgQn++fkDWaOmqGoj4Ek9gGs+DPxNUZKuwE183xjJroKvyo1IzVFeXvUrvmALy6FWD5xrdJT25gMg==
