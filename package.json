@@ -31,7 +31,9 @@
     "test": "jest",
     "test:typings": "yarn link && yarn link babel-plugin-jsx-code && tsc --jsx react --noEmit ts3.1/Component.test.tsx",
     "version": "pob-version",
-    "watch": "pob-watch"
+    "watch": "pob-watch",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "husky": {
     "hooks": {
@@ -80,7 +82,8 @@
     "@babel/core": "^7.1.5"
   },
   "dependencies": {
-    "@babel/generator": "^7.1.5"
+    "@babel/generator": "^7.1.5",
+    "snyk": "^1.319.0"
   },
   "devDependencies": {
     "@babel/core": "7.2.2",
@@ -108,5 +111,6 @@
     "react": "16.7.0",
     "typescript": "3.2.4",
     "yarnhook": "0.3.0"
-  }
+  },
+  "snyk": true
 }
