@@ -80,7 +80,7 @@
     "@babel/core": "^7.1.5"
   },
   "dependencies": {
-    "@babel/generator": "^7.1.5"
+    "@babel/generator": "^7.13.16"
   },
   "devDependencies": {
     "@babel/core": "7.2.2",
